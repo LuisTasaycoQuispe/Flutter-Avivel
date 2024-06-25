@@ -13,7 +13,7 @@ import 'package:intl/intl_standalone.dart'
 
 Future<List<Asignacion>> fetchAsigAct() async {
   final response = await http.get(
-      Uri.parse('https://glorious-eureka-97qjr547vg4vf996w-8080.app.github.dev/oraclecloud/asignaciones/activos'));
+      Uri.parse('https://orange-cod-qrww6qwwr6wh445w-8080.app.github.dev/oraclecloud/asignaciones/activos'));
 
   if (response.statusCode == 200) {
     List<dynamic> data = jsonDecode(response.body);

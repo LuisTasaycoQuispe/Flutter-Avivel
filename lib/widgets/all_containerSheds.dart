@@ -11,7 +11,7 @@ import 'package:provider/provider.dart';
 // CONTENDOR PRUEBA PARA LISTAR GALPONES INACTIVOS
 Future<List<Galpones>> fetchGalpon() async {
   final response = await http.get(
-      Uri.parse('https://glorious-eureka-97qjr547vg4vf996w-8080.app.github.dev/oraclecloud/galpones/inactivos'));
+      Uri.parse('https://orange-cod-qrww6qwwr6wh445w-8080.app.github.dev/oraclecloud/galpones/inactivos'));
 
   if (response.statusCode == 200) {
     List<dynamic> data = jsonDecode(response.body);

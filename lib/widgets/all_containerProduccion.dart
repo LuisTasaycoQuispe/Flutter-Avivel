@@ -9,7 +9,7 @@ import 'package:myapp/model/Produccion.dart';
 
 Future<List<Produccion>> fetchGalponAct() async {
   final response = await http.get(
-      Uri.parse('https://glorious-eureka-97qjr547vg4vf996w-8080.app.github.dev/oraclecloud/galpones/activos'));
+      Uri.parse('https://glorious-eureka-97qjr547vg4vf996w-8080.app.github.dev/oraclecloud/produccion/activos'));
 
   if (response.statusCode == 200) {
     List<dynamic> data = jsonDecode(response.body);
@@ -163,15 +163,7 @@ class _ContainerListarActivosState extends State<ProduccionListarActivos> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         ListTile(
-                          // title: Text(
-                          //   "ID: ${produccionFiltrados[index].id}",
-                          //   style: TextStyle(
-                          //     color: Provider.of<ModoNocturnoProvider>(context)
-                          //             .modoNocturno
-                          //         ? Colors.white
-                          //         : Colors.black,
-                          //   ),
-                          // ),
+                        
                           subtitle: Text(
                             "Produccion Total: ${produccionFiltrados[index].totalProduccion}\nFecha: ${produccionFiltrados[index].fecha}\nJava Rosado: ${produccionFiltrados[index].javaRosado}",
                             style: TextStyle(
@@ -528,7 +520,7 @@ class _ContainerListarActivosState extends State<ProduccionListarActivos> {
 
 Future<List<Produccion>> fetchGalponInac() async {
   final response = await http.get(
-      Uri.parse('https://glorious-eureka-97qjr547vg4vf996w-8080.app.github.dev/oraclecloud/galpones/activos'));
+      Uri.parse('https://glorious-eureka-97qjr547vg4vf996w-8080.app.github.dev/oraclecloud/produccion/inactivos'));
 
   if (response.statusCode == 200) {
     List<dynamic> data = jsonDecode(response.body);
